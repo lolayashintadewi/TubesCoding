@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home - EduSmart</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Animasi fadeInUp sederhana */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate {
+      opacity: 0;
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    /* Saat halaman sudah loaded, animasi aktif */
+    .loaded .animate {
+      opacity: 1;
+    }
+
+    /* Style tambahan untuk tombol dan detail */
+    .read-more-btn {
+      margin-top: 15px;
+      padding: 12px 28px;
+      background: #00dfd8;
+      border: none;
+      color: #121212;
+      font-weight: 700;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 0 15px #00dfd8;
+      transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+      display: inline-block;
+    }
+    .read-more-btn:hover {
+      background-color: #007cf0;
+      color: white;
+      box-shadow: 0 0 25px #00fff7;
+      transform: scale(1.08);
+    }
+
+    .content-box {
+      background: #004d52;
+      color: #e0e0e0;
+      border-radius: 15px;
+      box-shadow: 0 0 25px #00dfd8;
+      padding: 25px;
+      margin-bottom: 40px;
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      transition: transform 0.3s ease;
+    }
+    .content-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 40px #00fff7;
+    }
+
+    .short-text {
+      flex: 1 1 320px;
+      font-weight: 600;
+      line-height: 1.6;
+      text-align: justify;
+      font-size: 1.1rem;
+    }
+
+    .detail-box {
+      flex: 1 1 400px;
+      display: none;
+      background: #00373a;
+      padding: 25px 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 30px #00dfd8;
+      font-weight: 600;
+      line-height: 1.6;
+      user-select: text;
+      animation: fadeInUp 0.5s ease forwards;
+      max-width: 600px;
+      font-size: 1rem;
+      color: #d9f0f0;
+    }
+    .detail-box.show {
+      display: block;
+    }
+
+    h3 {
+      margin-top: 45px;
+      color: #00dfd8;
+      text-shadow: 0 0 10px #00dfd8;
+      font-size: 1.6rem;
+    }
+
+    /* Tambahan list untuk detail */
+    .detail-box ul {
+      margin-top: 10px;
+      margin-left: 20px;
+    }
+    .detail-box ul li {
+      margin-bottom: 8px;
+    }
+
+    /* Responsive */
+    @media (max-width: 720px) {
+      .content-box {
+        flex-direction: column;
+      }
+      .detail-box {
+        max-width: 100%;
+        margin-top: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="animate">
+    <h1>EDUSMART - HOME</h1>
+  </header>
+
+  <nav class="animate" style="animation-delay: 0.2s;">
+    <a href="index.html">Home</a>
+    <a href="about.html">Tentang</a>
+    <a href="materi.html">Materi</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+
+  <div class="content animate" style="animation-delay: 0.4s;">
+    <h2>SELAMAT DATANG DI EDU SMART</h2>
+
+    <!-- Kotak 1 -->
+    <div class="content-box animate" style="animation-delay: 0.6s;">
+      <div class="short-text">
+        Pendidikan adalah fondasi utama dalam membentuk masa depan yang cerah. Dengan belajar secara konsisten dan efektif, setiap siswa dapat mengembangkan potensi diri dan mencapai cita-cita.
+        <br />
+        <button class="read-more-btn">Baca Selengkapnya</button>
+      </div>
+      <div class="detail-box">
+        <p>EduSmart hadir sebagai platform yang mendukung proses belajar dengan berbagai keunggulan:</p>
+        <ul>
+          <li><strong>Materi Terstruktur:</strong> Disusun sesuai kurikulum terbaru dan mudah dipahami.</li>
+          <li><strong>Latihan Soal Interaktif:</strong> Melatih kemampuan dengan umpan balik langsung.</li>
+          <li><strong>Tips Belajar Efektif:</strong> Strategi belajar yang sudah terbukti meningkatkan hasil belajar.</li>
+          <li><strong>Antarmuka Ramah Pengguna:</strong> Desain yang nyaman digunakan oleh siswa dari berbagai usia.</li>
+          <li><strong>Kolaborasi Guru & Siswa:</strong> Fitur diskusi dan proyek kelompok untuk meningkatkan interaksi.</li>
+        </ul>
+        <p>Dengan EduSmart, belajar jadi lebih menyenangkan dan produktif!</p>
+      </div>
+    </div>
+
+    <!-- Kotak 2 -->
+    <h3 class="animate" style="animation-delay: 0.8s;">Mengapa EduSmart?</h3>
+    <div class="content-box animate" style="animation-delay: 1s;">
+      <div class="short-text">
+        Kami percaya bahwa pendidikan harus dapat diakses oleh semua orang tanpa batasan.
+        <br />
+        <button class="read-more-btn">Baca Selengkapnya</button>
+      </div>
+      <div class="detail-box">
+        <p>Alasan utama memilih EduSmart:</p>
+        <ul>
+          <li><strong>Teknologi Terkini:</strong> Memanfaatkan AI dan pembelajaran adaptif untuk pengalaman belajar personal.</li>
+          <li><strong>Forum Diskusi:</strong> Memudahkan siswa dan guru untuk bertukar ilmu secara langsung dan efektif.</li>
+          <li><strong>Akses 24/7:</strong> Materi dapat diakses kapan saja dan di mana saja tanpa batasan waktu.</li>
+          <li><strong>Monitoring Kemajuan:</strong> Sistem pelaporan yang membantu siswa mengetahui perkembangan belajar secara real-time.</li>
+          <li><strong>Dukungan Multibahasa:</strong> Mendukung berbagai bahasa agar bisa diakses lebih luas.</li>
+        </ul>
+        <p>EduSmart berkomitmen menghadirkan pendidikan berkualitas untuk semua.</p>
+      </div>
+    </div>
+
+    <!-- Kotak 3 -->
+    <h3 class="animate" style="animation-delay: 1.2s;">Fitur Utama EduSmart</h3>
+    <div class="content-box animate" style="animation-delay: 1.4s;">
+      <div class="short-text">
+        Platform kami dilengkapi dengan berbagai fitur yang mendukung pembelajaran efektif.
+        <br />
+        <button class="read-more-btn">Baca Selengkapnya</button>
+      </div>
+      <div class="detail-box">
+        <p>Fitur-fitur utama EduSmart yang memudahkan proses belajar:</p>
+        <ul>
+          <li><strong>Materi Interaktif:</strong> Modul pembelajaran dengan gambar, video, dan animasi.</li>
+          <li><strong>Kuis Online:</strong> Latihan soal yang menantang dengan penilaian otomatis.</li>
+          <li><strong>Video Pembelajaran:</strong> Penjelasan dari guru profesional dengan durasi singkat dan jelas.</li>
+          <li><strong>Pelaporan Kemajuan:</strong> Grafik dan statistik perkembangan belajar siswa.</li>
+          <li><strong>Mobile Friendly:</strong> Bisa diakses melalui smartphone atau tablet dengan tampilan optimal.</li>
+          <li><strong>Notifikasi & Reminder:</strong> Pengingat jadwal belajar dan tugas yang harus diselesaikan.</li>
+        </ul>
+        <p>Kami terus mengembangkan fitur untuk memberikan pengalaman belajar terbaik bagi setiap siswa.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="animate" style="animation-delay: 1.6s;">
+    &copy; 2025 EduSmart. All rights reserved.
+  </footer>
+
+  <script>
+    // Menambahkan class 'loaded' setelah halaman selesai dimuat agar animasi berjalan
+    window.addEventListener('load', () => {
+      document.body.classList.add('loaded');
+    });
+
+    document.querySelectorAll('.read-more-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const detailBox = button.parentElement.nextElementSibling;
+        detailBox.classList.toggle('show');
+        if (detailBox.classList.contains('show')) {
+          detailBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+

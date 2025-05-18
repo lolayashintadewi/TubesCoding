@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Materi - EduSmart</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .materi-box {
+      background-color: #00f0ff;
+      color: #000;
+      padding: 25px;
+      margin: 30px auto;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #00dfd8;
+      max-width: 700px;
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+      position: relative;
+      overflow: hidden;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .materi-box:hover {
+      box-shadow: 0 0 25px #00b8c8;
+    }
+
+    .materi-box h3 {
+      margin-top: 0;
+      font-size: 22px;
+      color: #000;
+    }
+
+    .materi-box p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .materi-box:nth-child(1) { animation-delay: 0.2s; }
+    .materi-box:nth-child(2) { animation-delay: 0.4s; }
+    .materi-box:nth-child(3) { animation-delay: 0.6s; }
+    .materi-box:nth-child(4) { animation-delay: 0.8s; }
+
+    .read-more-btn {
+      margin-top: 12px;
+      padding: 10px 24px;
+      background: linear-gradient(90deg, #00dfd8, #00b8c8);
+      border: none;
+      color: #121212;
+      font-weight: 700;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 223, 216, 0.6);
+      transition: background 0.4s ease, transform 0.3s ease;
+      user-select: none;
+      display: inline-block;
+      font-size: 16px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .read-more-btn:hover {
+      background: linear-gradient(90deg, #007cf0, #005f9e);
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    .read-more-btn:focus {
+      outline: none;
+      box-shadow: 0 0 8px 3px #00dfd8;
+    }
+
+    .more-content {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      margin-top: 15px;
+      font-size: 15px;
+      line-height: 1.5;
+      color: #000;
+      background: #e0f7f7;
+      padding: 0 18px;
+      border-radius: 10px;
+      box-shadow: inset 0 0 10px #00b8c8;
+      transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
+    }
+
+    .more-content.active {
+      max-height: 1000px;
+      opacity: 1;
+      padding: 12px 18px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MATERI BELAJAR</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">Tentang</a>
+    <a href="materi.html">Materi</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+
+  <div class="content">
+    <h2>Pelajari Materi Berkualitas</h2>
+
+    <div class="materi-box">
+      <h3>Matematika Dasar</h3>
+      <p>Matematika dasar mencakup operasi hitung seperti penjumlahan, pengurangan, perkalian, dan pembagian. Konsep ini menjadi fondasi penting dalam logika berpikir, pemecahan masalah, dan kehidupan sehari-hari.</p>
+    </div>
+
+    <div class="materi-box">
+      <h3>Bahasa Indonesia</h3>
+      <p>Bahasa Indonesia mengajarkan tata bahasa, kosa kata, pemahaman bacaan, dan keterampilan menulis. Materi ini penting untuk meningkatkan kemampuan komunikasi lisan dan tulisan yang baik dan benar.</p>
+    </div>
+
+    <div class="materi-box">
+      <h3>Bahasa Inggris</h3>
+      <p>Bahasa Inggris mencakup grammar, speaking, reading, dan listening. Penguasaan bahasa ini membuka akses ke ilmu pengetahuan global, teknologi, dan peluang karier internasional.</p>
+    </div>
+
+    <div class="materi-box">
+      <h3>Beasiswa</h3>
+      <p>Beasiswa adalah bantuan dana pendidikan yang diberikan kepada siswa atau mahasiswa berdasarkan prestasi, kebutuhan ekonomi, atau bidang studi tertentu.</p>
+      <button class="read-more-btn" aria-expanded="false">Lihat Selengkapnya</button>
+      <div class="more-content" aria-hidden="true">
+        <p><strong>Jenis-jenis Beasiswa yang Umum Tersedia:</strong></p>
+        <ul>
+          <li><strong>Beasiswa Prestasi:</strong> Untuk siswa/mahasiswa berprestasi akademik atau non-akademik.</li>
+          <li><strong>Beasiswa KIP Kuliah:</strong> Untuk siswa dari keluarga kurang mampu dengan nilai baik.</li>
+          <li><strong>Beasiswa dari Kampus:</strong> Setiap kampus sering memiliki program beasiswa internal.</li>
+          <li><strong>Beasiswa Jurusan Tertentu:</strong> Disediakan untuk jurusan seperti Teknik, Pendidikan, Pertanian, dll.</li>
+          <li><strong>Beasiswa dari Lembaga Swasta:</strong> Seperti dari Bank Indonesia, Djarum Foundation, dll.</li>
+        </ul>
+        <p><strong>Tips Mendapatkan Beasiswa:</strong></p>
+        <ul>
+          <li>Persiapkan dokumen penting seperti rapor, KTP, dan surat rekomendasi.</li>
+          <li>Rajin mencari informasi melalui website resmi atau sosial media penyedia beasiswa.</li>
+          <li>Tulis esai motivasi yang kuat dan jujur.</li>
+          <li>Ikuti seleksi wawancara dengan percaya diri dan jujur.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="materi-box">
+      <h3>Tips Belajar Efektif</h3>
+      <p>Belajar efektif membutuhkan strategi yang tepat agar waktu dan energi dapat dimanfaatkan dengan baik.</p>
+      <button class="read-more-btn" aria-expanded="false">Lihat Selengkapnya</button>
+      <div class="more-content" aria-hidden="true">
+        <ul>
+          <li>Atur jadwal belajar dengan waktu istirahat yang cukup.</li>
+          <li>Gunakan teknik Pomodoro: belajar 25 menit, istirahat 5 menit.</li>
+          <li>Buat catatan ringkas dan gunakan mind map.</li>
+          <li>Diskusikan materi dengan teman atau guru.</li>
+          <li>Hindari multitasking agar lebih fokus.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 EduSmart. All rights reserved.
+  </footer>
+
+  <script>
+    document.querySelectorAll('.read-more-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const moreContent = button.nextElementSibling;
+        const isActive = moreContent.classList.contains('active');
+
+        if (isActive) {
+          moreContent.classList.remove('active');
+          button.textContent = 'Lihat Selengkapnya';
+          button.setAttribute('aria-expanded', 'false');
+          moreContent.setAttribute('aria-hidden', 'true');
+        } else {
+          moreContent.classList.add('active');
+          button.textContent = 'Sembunyikan';
+          button.setAttribute('aria-expanded', 'true');
+          moreContent.setAttribute('aria-hidden', 'false');
+          moreContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kontak - EduSmart</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Animasi fadeInUp sederhana */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate {
+      opacity: 0;
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .loaded .animate {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>KONTAK KAMI</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">Tentang</a>
+    <a href="materi.html">Materi</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+
+  <div class="content animate">
+    <h2>Hubungi Kami</h2>
+    <p>Email: info@edusmart.id</p>
+    <p>Instagram: @edusmart_id</p>
+
+    <h3>Ikuti Kami</h3>
+    <div class="social-buttons">
+      <a href="https://wa.me/6281234567890" target="_blank" class="social-icon whatsapp">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+        WhatsApp
+      </a>
+      <a href="https://instagram.com/edusmart_id" target="_blank" class="social-icon instagram">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
+        Instagram
+      </a>
+      <a href="https://youtube.com/@edusmartchannel" target="_blank" class="social-icon youtube">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" />
+        YouTube
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 EduSmart. All rights reserved.
+  </footer>
+
+  <script>
+    // Tambahkan class 'loaded' ke <body> agar animasi dijalankan
+    window.addEventListener('load', () => {
+      document.body.classList.add('loaded');
+    });
+  </script>
+</body>
+</html>

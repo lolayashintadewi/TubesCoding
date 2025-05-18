@@ -1,0 +1,194 @@
+/* style.css - lengkap dengan tulisan putih di kotak detail dan short text */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: white;
+}
+
+header {
+  background: linear-gradient(to right, #007cf0, #00dfd8);
+  text-align: center;
+  padding: 40px 20px;
+  border-radius: 0 0 10px 10px;
+}
+
+header h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+}
+
+nav {
+  background-color: #1f1f1f;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+nav a {
+  text-decoration: none;
+  background: #007cf0;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #007cf0;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  transform: scale(1.05);
+  background: #005dc1;
+}
+
+.content {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #1f1f1f;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 20px #00dfd8;
+}
+
+.content h2 {
+  color: #00dfd8;
+}
+
+/* Kotak gabungan short text dan detail */
+.content-box {
+  background: #004d52;
+  color: #fff; /* tulisannya putih supaya jelas */
+  border-radius: 15px;
+  box-shadow: 0 0 25px #00dfd8;
+  padding: 20px;
+  margin-bottom: 35px;
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+/* Tulisan ringkas di kiri */
+.short-text {
+  flex: 1 1 300px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: justify;
+  color: #fff; /* putih */
+}
+
+/* Kotak detail di kanan */
+.detail-box {
+  flex: 1 1 350px;
+  display: none;
+  background: #00373a;
+  padding: 18px 22px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px #00dfd8;
+  font-weight: 600;
+  line-height: 1.5;
+  user-select: text;
+  animation: fadeInUp 0.4s ease forwards;
+  max-width: 500px;
+  color: #fff; /* putih */
+}
+
+.detail-box.show {
+  display: block;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tombol baca selengkapnya */
+.read-more-btn {
+  margin-top: 20px;
+  padding: 12px 26px;
+  background: #00dfd8;
+  border: none;
+  color: #121212;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #00dfd8;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.read-more-btn:hover {
+  background-color: #007cf0;
+  color: white;
+  box-shadow: 0 0 25px #00fff7;
+  transform: scale(1.08);
+}
+
+/* Heading kecil */
+h3 {
+  margin-top: 35px;
+  color: #00dfd8;
+  text-shadow: 0 0 8px #00dfd8;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1f1f1f;
+  color: #aaa;
+  margin-top: 40px;
+}
+
+.social-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: 0.3s;
+  box-shadow: 0 0 10px white;
+}
+
+.social-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.social-icon.whatsapp {
+  background: #25D366;
+}
+
+.social-icon.instagram {
+  background: linear-gradient(to right, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.social-icon.youtube {
+  background: #FF0000;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px white;
+}
